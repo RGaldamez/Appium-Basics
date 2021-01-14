@@ -7,6 +7,7 @@ exports.config = {
   framework: "mocha",
   mochaOpts: {
     ui: "bdd",
+    require: ["@babel/register"],
     timeout: 60000,
   },
   maxInstances: 1,
