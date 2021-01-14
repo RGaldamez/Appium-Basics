@@ -7,9 +7,19 @@ exports.config = {
   framework: "mocha",
   mochaOpts: {
     ui: "bdd",
-    require: ["@babel/register"],
+    // require: ["@babel/register"],
     timeout: 60000,
   },
   maxInstances: 1,
   sync: true,
+  specs: ["./mocha-basics.js"],
+  capabilities: [
+    {
+      platformName: "Android",
+      automationName: "UiAutomator2",
+      udid: "emulator-5554",
+      appPackage: "com.wdiodemoapp",
+      appActivity: ".MainActivity",
+    },
+  ],
 };
